@@ -38,3 +38,6 @@ matrix:
       # Ref: https://docs.travis-ci.com/user/reference/osx
       dotnet: 3.1.100
       osx_image: xcode10.1
+      
+after_success:
+  - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)dist: trusty      
